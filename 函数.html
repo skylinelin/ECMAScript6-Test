@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数</title>
+</head>
+<body>
+    <script>
+        //原始定义函数
+        function sum(a,b){
+            return a+b;
+        }
+        //箭头函数
+        const add = (a,b) => a+b;
+
+        //旧版本规则定义函数
+        const p = {
+            name:"linfayang",
+            age:21,
+            sayHello: function(){
+                console.log("hello");
+            }
+        }
+        p.sayHello();
+
+        //新规则对象定义函数
+        const p1 = {
+            name: "lin",
+            age: 22,
+            sayHello(){
+                console.log("world~");
+            }
+        }
+        p1.sayHello();
+
+        //函数内部也可以进行解构
+        //原始定义函数
+        const hello = function(person){
+            console.log(person.name,person.age)
+        }
+        hello(p);
+
+        //解构表达式定义
+        const hello1 = ({name,age}) => console.log(name,age);
+        hello1(p1);
+
+    </script>
+    
+</body>
+</html>
