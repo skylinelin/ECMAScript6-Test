@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MapReduce</title>
+</head>
+<body>
+    <script>
+        // Map 遍历逐个处理 Reduce合并处理，二者思想和Hadoop一模一样
+        let arr = ['1','2','44','21','32'];
+        console.log(arr);
+        //将每一个元素逐个处理得到新的元素
+        let arr2 = arr.map(s => parseInt(s));
+        console.log(arr2);
+
+        //reduce处理思想：拿到两个元素，处理完结果作为第一个元素
+        //求数组内所有数和，可以指定初始值用于第一个元素
+        let sum = arr2.reduce((a,b) => a+b,0);
+        console.log(sum);
+    </script>
+    
+</body>
+</html>
